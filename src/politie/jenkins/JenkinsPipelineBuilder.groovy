@@ -14,7 +14,7 @@ def getPipelineSteps() {
 }
 
 void mavenPipeline(String deployType, String nodeLabel, String serviceName, String defaultBranch, boolean enableJacoco) {
-    node(nodeLabel) {
+    node('any') {
         try {
             stage('Checkout') {
                 pipelineSteps.cleanWorkspace()
